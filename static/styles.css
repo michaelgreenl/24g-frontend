@@ -1,9 +1,59 @@
+@font-face {
+    font-family: "Brandon Grotesque Bold";
+    src: url('./assets/fonts/BRANDON_BLD.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "Brandon Grotesque Black";
+    src: url('./assets/fonts/BRANDON_BLK.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "Brandon Grotesque Light";
+    src: url('./assets/fonts/BRANDON_LIGHT.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "Brandon Grotesque Medium";
+    src: url('./assets/fonts/BRANDON_MED.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "Brandon Grotesque Regular";
+    src: url('./assets/fonts/BRANDON_REG.otf') format('opentype');
+}
+
+/* Font classes, one for each font */
+.font-bold {
+    font-family: "Brandon Grotesque Bold", serif;
+}
+
+.font-black {
+    font-family: "Brandon Grotesque Black", serif;
+}
+
+.font-light {
+    font-family: "Brandon Grotesque Light", serif;
+}
+
+.font-medium {
+    font-family: "Brandon Grotesque Medium", serif;
+}
+
+.font-regular {
+    font-family: "Brandon Grotesque Regular", serif;
+}
+
 /* Style variables */
 * {
-    --light-blue: #2ea0dc;
-    --yellow: #f8a71c;
-    --gray: #373c3f;
-    --white: #feffff;
+    --blue: #009DDB;
+    --blue-accent: #0685C1;
+    --orange: #FAA61A;
+    --orange-accent: #E58C1B;
+    --dark-gray: #393C3E;
+    --gray: #D1D1D1;
+    --light-gray: #EBEBEB;
+    --white: #ffffff;
 }
 
 /* Font size for rem */
