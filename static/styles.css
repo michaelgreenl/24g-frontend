@@ -1,0 +1,17 @@
+/* Style variables */
+* {
+    --light-blue: #2ea0dc;
+    --yellow: #f8a71c;
+    --gray: #373c3f;
+    --white: #feffff;
+}
+
+/* Font size for rem */
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
