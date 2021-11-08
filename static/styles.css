@@ -61,7 +61,82 @@ html {
     font-size: 10px;
 }
 
-body {
+body, h1 {
     margin: 0;
     padding: 0;
 }
+
+/* For company guidelines */
+.logo {
+    margin: 0.5rem
+}
+
+/* HEADER | START */
+
+.header-name,
+.header-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--white);
+}
+
+.header-title {
+    height: 12rem;
+    padding-left: 5rem;
+    background-color: var(--dark-gray);
+}
+
+.header-name {
+    padding: 0.1rem 0 0.1rem 5rem;
+    background-color: var(--blue);
+}
+
+.header-name-text {
+    margin: 1rem 0;
+}
+
+.header-title-container,
+.title-logo-container,
+.title-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title-container {
+    width: 34rem;
+}
+
+.header-title-logo {
+    height: 5rem;
+
+    /* Overriding margin-left set to .logo class since there's already space to left of logo */
+    margin-left: 0;
+}
+
+.header-title-text {
+    font-size: 2.25rem;
+    white-space: nowrap;
+    letter-spacing: 0.3ch;
+}
+
+@media all and (max-width: 500px){
+    .header-name {
+        padding: 1.5rem 0 1.5rem 4rem;
+    }
+
+    .header-title {
+        height: 18rem;
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .header-title-container {
+        height: 10rem;
+        flex-direction: column;
+    }
+}
+
+/* HEADER | END */
