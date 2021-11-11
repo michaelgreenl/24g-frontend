@@ -44,8 +44,8 @@
     font-family: "Brandon Grotesque Regular", serif;
 }
 
-/* Style variables */
 * {
+    /* Style variables */
     --blue: #009DDB;
     --blue-accent: #0685C1;
     --orange: #FAA61A;
@@ -54,6 +54,9 @@
     --gray: #D1D1D1;
     --light-gray: #EBEBEB;
     --white: #ffffff;
+
+    /* So padding doesn't cause overflow */
+    box-sizing: border-box;
 }
 
 /* Font size for rem */
@@ -61,10 +64,18 @@ html {
     font-size: 10px;
 }
 
+/* Removing default properties | START */
+
 body, h1 {
     margin: 0;
     padding: 0;
 }
+
+button {
+    border: none;
+}
+
+/* Removing default properties | END */
 
 /* For company guidelines */
 .logo {
@@ -75,11 +86,17 @@ body, h1 {
 /* HEADER | START */
 
 .header-name,
-.header-title {
+.header-title,
+.header-title-container,
+.title-logo-container,
+.title-text-container {
     display: flex;
     align-items: center;
+}
+
+.header-name,
+.header-title {
     width: 100%;
-    box-sizing: border-box;
     color: var(--white);
 }
 
@@ -101,9 +118,7 @@ body, h1 {
 .header-title-container,
 .title-logo-container,
 .title-text-container {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .header-title-container {
@@ -150,25 +165,33 @@ body, h1 {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    box-sizing: border-box;
     padding: 6rem;
 }
 
 /* video-section | start */
 
-.video-section {
+.video-section,
+.wrapper,
+.video-interactions-container,
+.interactions-likes-container,
+.video-selection-container,
+.like-count-container
+{
     display: flex;
+}
+
+.video-section,
+.video-container,
+.video-current {
     width: 100%;
+}
+
+.video-section {
     max-width: 130rem;
 }
 
-.wrapper {
-    width: 20%;
-}
-
-.left-wrapper,
-.right-wrapper {
-    display: flex;
+.wrapper,
+.video-selection-container {
     flex-direction: column;
 }
 
@@ -191,15 +214,9 @@ body, h1 {
     margin: 1.5rem 0;
 }
 
-.video-container,
-.video-current {
-    width: 100%;
-}
-
 .video-interactions-container,
 .interactions-likes-container,
 .video-selection-container {
-    display: flex;
     justify-content: space-between;
 }
 
@@ -218,8 +235,29 @@ body, h1 {
 }
 
 .like-count-container {
-    display: flex;
     align-items: center;
+}
+
+.thumb-btn {
+    background: transparent;
+    padding: 0;
+}
+
+.thumb-icon {
+    transition: all ease 50ms;
+}
+
+.thumb-icon:hover * {
+    fill: var(--blue-accent);
+}
+
+@keyframes like-rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-20deg);
+    }
 }
 
 .num-likes {
@@ -227,42 +265,59 @@ body, h1 {
 }
 
 .video-selection-container {
-    flex-direction: column;
     height: 100%;
-    margin: 5.3rem 0 5.7rem 3rem;
+    margin: 6.6rem 0 6.9rem 3rem;
 }
 
-.video-img {
-    transition: border ease 100ms;
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
+.video-btn {
+    transition: all ease-in 75ms;
+    height: 27.25%;
+    width: 92%;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: local;
+    background-repeat: no-repeat;
 }
 
-@media all and (max-width: 800px) {
-    .video-section {
-        flex-direction: column;
-    }
+.video-btn:hover,
+.selected-video {
+    box-shadow: inset 0 0 0 0.5rem var(--orange);
+}
 
+#ces-overview-btn {
+    background-image: url("./assets/images/ces_overview.jpeg");
+}
+
+#who-is-24g-btn {
+    background-image: url("./assets/images/who_is_24g.jpeg");
+}
+
+#future-of-drones-btn {
+    background-image: url("./assets/images/future_of_drones.jpeg");
+}
+
+@media all and (max-width: 950px) {
+    .video-selection-container,
     .wrapper {
-        /* Changing height to the same as width was before, for flex property.
-           Since flex-direction is changing in video-section. */
-        height: 20%;
         width: 100%;
-    }
-
-    .right-wrapper {
-        padding: 3rem 2rem;
     }
 
     .video-selection-container {
         flex-direction: row;
         margin: 0;
-        width: 100%;
+        height: 12.5vw;
     }
 
-    .video-img {
-        height: 16.875%;
+    .video-section {
+        flex-direction: column;
+    }
+
+    .right-wrapper {
+        padding: 3rem 1.75rem;
+    }
+
+    .video-btn {
+        height: 100%;
         width: 30%;
     }
 }
@@ -277,4 +332,5 @@ body, h1 {
         padding: 4rem 3rem;
     }
 }
+
 /* MAIN | END */
