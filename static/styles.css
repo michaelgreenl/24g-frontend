@@ -259,6 +259,33 @@ button {
     }
 }
 
+@keyframes like-move {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes dislike-rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes dislike-move {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(5px);
+    }
+}
+
 .num-likes {
     margin-left: 0.5rem;
 }
