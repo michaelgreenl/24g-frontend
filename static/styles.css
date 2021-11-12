@@ -345,6 +345,10 @@ button {
     padding: 2rem 25% 2rem 0;
 }
 
+.comments-container {
+    width: 65vw;
+}
+
 .comment-label,
 .comment-input,
 .comment-add-btn,
@@ -382,7 +386,13 @@ button {
     background-color: var(--orange-accent);
 }
 
+.single-comment-container,
+.comment-name-time-container {
+    width: 100%;
+}
+
 .single-comment-container {
+    width: 100%;
     margin: 1rem 0;
 }
 
@@ -397,15 +407,11 @@ button {
 }
 
 .comment-content-container {
-    width: 57.5vw;
+    width: 90%;
 }
 
 .comment {
     margin: 0;
-}
-
-.comment-name-time-container {
-    width: 100%;
 }
 
 .comment-name {
@@ -421,8 +427,8 @@ button {
         padding: 0;
     }
 
-    .comment-content-container {
-        width: 77.5vw;
+    .comments-container {
+        width: 80vw;
     }
 }
 
